@@ -343,6 +343,52 @@
     </div>
   </section>
 
+  <section class="registration-section">
+    <div class="container registration-container">
+
+      <div class="reg-left">
+        <h1 class="reg-title">Quick<br>Registration Form</h1>
+
+        <form class="reg-form">
+          <div class="form-row">
+            <input type="text" placeholder="First Name*" class="form-input">
+            <input type="text" placeholder="Last Name*" class="form-input">
+          </div>
+
+          <div class="form-row">
+            <input type="email" placeholder="Email Address*" class="form-input">
+            <input type="tel" placeholder="Phone Number*" class="form-input">
+          </div>
+
+          <div class="form-input radio-row">
+            <span class="radio-label">Unit Interest*</span>
+            <div class="radio-options">
+              <label class="radio-item">
+                <input type="radio" name="unit" value="2-bed"> 2 Bedroom
+              </label>
+              <label class="radio-item">
+                <input type="radio" name="unit" value="3-bed"> 3 Bedroom
+              </label>
+              <label class="radio-item">
+                <input type="radio" name="unit" value="unsure"> Not Sure Yet
+              </label>
+            </div>
+          </div>
+
+          <button type="submit" class="reg-btn">Join the Insider List</button>
+
+          <p class="privacy-text">*We respect your privacy. Unsubscribe anytime.</p>
+        </form>
+      </div>
+
+      <div class="reg-right">
+        <img src="{{ get_public_template_url('landing-pages/public/registration-form-img.jpg') }}"
+          alt="Registration Lifestyle" class="reg-img">
+      </div>
+
+    </div>
+  </section>
+
   {{ standard_footer_includes }}
   <script src="{{ get_public_template_url('landing-pages/landing-page.js') }}"></script>
 </body>
