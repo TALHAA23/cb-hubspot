@@ -342,7 +342,8 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
-  padding: 60px 40px;
+  /* Changed from 'padding: 60px 40px' to dynamic spacing */
+  padding: 4vh 40px;
   box-sizing: border-box;
 }
 
@@ -391,8 +392,8 @@ body {
 /* --- Center Column (Cream Box) --- */
 .col-center {
   background-color: #fcf8e8;
-  /* Cream color */
   justify-content: center;
+  /* Vertically center everything */
   align-items: center;
   text-align: center;
 }
@@ -567,4 +568,39 @@ body {
        but 100vh is usually fine here */
     height: 100vh;
   }
+}
+
+/* --- New Center Styles for Image Cards --- */
+
+.center-title-small {
+  font-family: 'Arimo', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #000;
+  margin-bottom: 1.5vh;
+  /* Reduced gap */
+  text-transform: capitalize;
+}
+
+.center-feature-img {
+  width: 100%;
+  height: auto;
+  /* Maintain aspect ratio */
+  max-height: 70vh;
+  /* KEY FIX: Limit image to 40% of screen height */
+  object-fit: cover;
+  border-radius: 30px;
+  margin-bottom: 2vh;
+  /* Use vh for dynamic spacing */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.center-caption {
+  font-family: 'Arimo', sans-serif;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #333;
+  max-width: 300px;
+  margin: 0 auto;
+  line-height: 1.4;
 }
