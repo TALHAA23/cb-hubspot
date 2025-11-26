@@ -800,3 +800,207 @@ body {
     border-radius: 20px;
   }
 }
+
+.statement-section {
+  background-color: #606C38;
+  /* Matches the green theme */
+  padding: 150px 20px;
+  /* Generous padding for the "editorial" look */
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.statement-text {
+  font-family: 'Cormorant', serif;
+  font-size: 60px;
+  /* Large, impactful size */
+  line-height: 1.1;
+  /* Tight line height for elegance */
+  font-weight: 400;
+  max-width: 1000px;
+  /* Prevents it from getting too wide on huge screens */
+  margin: 0 auto;
+  color: #FEFAE0;
+  /* Solid Cream Color */
+}
+
+/* The faded second half */
+.statement-faded {
+  color: #FEFAE033;
+  /* The requested 20% opacity color */
+}
+
+/* --- Responsive Adjustments --- */
+
+@media (max-width: 1024px) {
+  .statement-text {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .statement-section {
+    padding: 100px 20px;
+  }
+
+  .statement-text {
+    font-size: 36px;
+    line-height: 1.2;
+  }
+}
+
+/* --- Priority Section Styles --- */
+
+.priority-section {
+  background-color: #fff;
+  /* White background */
+  padding: 100px 0;
+
+  /* The Overlap Effect */
+  margin-top: -80px;
+  /* Pulls section UP over the green section */
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  position: relative;
+  z-index: 30;
+  /* Ensures it sits on top of the green section */
+}
+
+.priority-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* Split layout 50/50 */
+  gap: 80px;
+  /* Space between Image and Text */
+  align-items: center;
+}
+
+/* --- Left Column (Image) --- */
+.priority-left {
+  width: 100%;
+}
+
+.priority-main-img {
+  width: 100%;
+  height: auto;
+  border-radius: 30px;
+  /* Matches the curve style */
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  display: block;
+}
+
+/* --- Right Column (Text & Icons) --- */
+.priority-right {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  /* Explicitly align left */
+}
+
+.priority-title {
+  font-family: 'Cormorant', serif;
+  font-size: 64px;
+  line-height: 1.1;
+  color: #000;
+  margin: 0 0 40px 0;
+}
+
+.priority-info-block {
+  margin-bottom: 50px;
+}
+
+.priority-subtitle {
+  font-family: 'Arimo', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  margin: 0 0 15px 0;
+  color: #000;
+}
+
+.priority-desc {
+  font-family: 'Arimo', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+  margin: 0;
+  max-width: 450px;
+}
+
+/* --- Icon Grid --- */
+.priority-features-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* 2 Columns */
+  column-gap: 40px;
+  row-gap: 50px;
+}
+
+.priority-feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.priority-feature-item img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.priority-feature-item p {
+  font-family: 'Arimo', sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #333;
+  margin: 0;
+  max-width: 200px;
+}
+
+
+/* --- Responsive Breakpoints --- */
+
+@media (max-width: 1024px) {
+  .priority-container {
+    grid-template-columns: 1fr;
+    /* Stack vertically on tablet */
+    gap: 60px;
+  }
+
+  .priority-main-img {
+    max-height: 400px;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 768px) {
+  .priority-section {
+    padding: 60px 0;
+    margin-top: -40px;
+    /* Less overlap on mobile */
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+  }
+
+  .priority-title {
+    font-size: 48px;
+  }
+
+  .priority-features-grid {
+    grid-template-columns: 1fr;
+    /* Stack icons vertically on mobile */
+    row-gap: 30px;
+  }
+
+  .priority-feature-item {
+    flex-direction: row;
+    /* Horizontal alignment on mobile for better flow */
+    align-items: center;
+  }
+
+  .priority-feature-item p {
+    max-width: 100%;
+  }
+}
