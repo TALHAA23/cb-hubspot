@@ -303,3 +303,268 @@ body {
     font-size: 40px;
   }
 }
+
+/* Container to hold the stack */
+.scroll-stack-container {
+  position: relative;
+  width: 100%;
+}
+
+/* The Individual Card Section */
+.sticky-card {
+  position: sticky;
+  /* THE MAGIC: Sticks to top until pushed by next element */
+  top: 0;
+  height: 100vh;
+  /* Must be full viewport height */
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.2);
+  /* Shadow helps distinguish layers */
+}
+
+/* Grid Overlay */
+.sticky-overlay {
+  display: grid;
+  grid-template-columns: 1fr 500px 1fr;
+  /* Left | Fixed Center | Right */
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  /* Slight tint on image parts */
+}
+
+/* Common Column Styles */
+.sticky-col {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 60px 40px;
+  box-sizing: border-box;
+}
+
+/* --- Left Column (Title & CTA) --- */
+.col-left {
+  justify-content: center;
+  align-items: flex-start;
+  color: #fff;
+}
+
+.sticky-title {
+  font-family: 'Cormorant', serif;
+  font-size: 3rem;
+  /* Big impact font */
+  line-height: 1;
+  font-weight: 500;
+  margin: 0 0 40px 0;
+  opacity: 0;
+  /* Hidden initially for JS animation */
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.sticky-btn {
+  background: #fcf8e8;
+  color: #333;
+  padding: 18px 36px;
+  border-radius: 100px;
+  text-decoration: none;
+  font-family: 'Arimo', sans-serif;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: transform 0.3s;
+  opacity: 0;
+  /* Hidden initially */
+  transform: translateY(30px);
+  transition: all 0.8s ease-out 0.2s;
+  /* 0.2s delay */
+}
+
+.sticky-btn:hover {
+  transform: translateY(-2px);
+  background: #fff;
+}
+
+/* --- Center Column (Cream Box) --- */
+.col-center {
+  background-color: #fcf8e8;
+  /* Cream color */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.center-content {
+  max-width: 380px;
+  opacity: 0;
+  /* Hidden initially */
+  transform: scale(0.95);
+  transition: all 0.8s ease-out 0.1s;
+}
+
+.center-title {
+  font-family: 'Arimo', sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 1.3;
+  color: #000;
+  margin-bottom: 30px;
+}
+
+.center-desc {
+  font-family: 'Arimo', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* --- Right Column (Arrow) --- */
+
+.col-right {
+  position: relative;
+  /* This allows us to absolute position the button inside it */
+}
+
+.scroll-down-btn {
+  /* Positioning: Absolute allows precise placement */
+  position: absolute;
+  bottom: 170px;
+  /* Moved UP (Increase this number to move it higher) */
+  right: 40px;
+  /* Moved RIGHT (Decrease this number to move closer to edge) */
+
+  /* Shape & Size */
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  /* 50% makes it a perfect CIRCLE */
+  border: 1px solid rgba(255, 255, 255, 0.8);
+
+  /* Styling */
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  pointer-events: auto;
+  /* Re-enable clicks since parent has pointer-events: none */
+  transition: all 0.3s ease;
+  z-index: 20;
+  /* Ensures it sits on top of everything */
+}
+
+.scroll-down-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #fff;
+  transform: translateY(-5px);
+  /* Subtle hover lift */
+}
+
+.scroll-down-btn img {
+  width: 24px;
+  display: block;
+}
+
+/* Optional: Hide the button on the very last card since there is nowhere to scroll */
+.sticky-card:last-child .scroll-down-btn {
+  display: none;
+}
+
+.scroll-down-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.scroll-down-btn img {
+  width: 24px;
+  /* Adjust icon size if needed */
+  height: auto;
+  display: block;
+}
+
+/* Optional: Hide the button on the very last card since there is nowhere to scroll */
+.sticky-card:last-child .scroll-down-btn {
+  display: none;
+}
+
+.scroll-down-indicator {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  background: transparent;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.scroll-down-indicator:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(5px);
+}
+
+/* --- Animation Class (Added by JS) --- */
+.is-visible .sticky-title,
+.is-visible .sticky-btn,
+.is-visible .center-content {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+  .sticky-overlay {
+    grid-template-columns: 1fr 1fr;
+    /* Remove right column */
+  }
+
+  .col-center {
+    grid-column: 2;
+  }
+
+  .col-right {
+    display: none;
+  }
+
+  .sticky-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* On mobile, stack works, but layout changes */
+  .sticky-overlay {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .col-left {
+    flex: 1;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.4);
+    /* Darker overlay for text readibility */
+  }
+
+  .col-center {
+    flex: 1;
+    padding: 40px 20px;
+  }
+
+  .sticky-title {
+    font-size: 2rem;
+  }
+
+  .sticky-card {
+    /* Mobile sticky height can sometimes be tricky with URL bars, 
+       but 100vh is usually fine here */
+    height: 100vh;
+  }
+}
