@@ -1,0 +1,67 @@
+<!--
+    templateType: page
+    label: Page template
+    isAvailableForNewContent: true
+-->
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>{{ content.html_title }}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400&family=Cormorant:wght@500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="{{ get_public_template_url('landing-pages/landing-page.css') }}">
+  <meta name="description" content="{{ content.meta_description }}">
+  {{ standard_header_includes }}
+</head>
+
+<body>
+
+
+  <!-- <h1>Your Minimal HubSpot Page</h1>
+  <button class="hello-btn">
+    Click me
+  </button>
+
+
+  <img src="{{ get_public_template_url('landing-pages/public/cat-1.jpg') }}" alt="From Public Folder"> -->
+
+
+  <!-- hero -->
+  <section class="hero-section"
+    style="background-image: url('{{ get_public_template_url('landing-pages/public/hero-img.png') }}');">
+    <div class="hero-overlay">
+      <div class="container">
+        <div class="hero-logo-container">
+          <img src="{{ get_public_template_url('landing-pages/public/logo.png') }}" alt="Nichola Logo"
+            class="hero-logo">
+        </div>
+
+        <div class="hero-content">
+          <div class="hero-left">
+            <h1 class="hero-title">Designed For<br>Modern Living</h1>
+          </div>
+          <div class="hero-right">
+            <p class="hero-description">
+              30 Thoughtfully Designed Townhomes starting from the mid 600s. Walk to everything. 7 minutes to downtown.
+              Premium features included.
+            </p>
+            <div class="hero-buttons">
+              <a href="#" class="btn btn-primary">Get Early Access</a>
+              <a href="#" class="btn btn-secondary">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  {{ standard_footer_includes }}
+  <script src="{{ get_public_template_url('landing-pages/landing-page.js') }}"></script>
+</body>
+
+</html>
