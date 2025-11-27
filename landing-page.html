@@ -30,8 +30,11 @@
   <img src="{{ get_public_template_url('landing-pages/public/cat-1.jpg') }}" alt="From Public Folder"> -->
 
 
-  <section class="hero-section"
-    style="background-image: url('{{ get_public_template_url('landing-pages/public/hero-img.png') }}');">
+  <section class="hero-section" style="
+      background-image: 
+        linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.8)),
+        url('{{ get_public_template_url('landing-pages/public/hero-img.png') }}');
+  ">
     <div class="hero-overlay">
       <div class="container">
         <div class="hero-logo-container">
