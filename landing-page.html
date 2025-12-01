@@ -342,36 +342,29 @@
       <div class="reg-left">
         <h1 class="reg-title">Quick<br>Registration Form</h1>
 
-        <form class="reg-form">
+        <form id="leadForm" class="reg-form">
           <div class="form-row">
-            <input type="text" placeholder="First Name*" class="form-input">
-            <input type="text" placeholder="Last Name*" class="form-input">
+            <input type="text" name="firstname" placeholder="First Name*" class="form-input" required>
+            <input type="text" name="lastname" placeholder="Last Name*" class="form-input" required>
           </div>
 
           <div class="form-row">
-            <input type="email" placeholder="Email Address*" class="form-input">
-            <input type="tel" placeholder="Phone Number*" class="form-input">
+            <input type="email" name="email" placeholder="Email Address*" class="form-input" required>
+            <input type="tel" name="phone" placeholder="Phone Number*" class="form-input">
           </div>
 
           <div class="form-input radio-row">
             <span class="radio-label">Unit Interest*</span>
             <div class="radio-options">
-              <label class="radio-item">
-                <input type="radio" name="unit" value="2-bed"> 2 Bedroom
-              </label>
-              <label class="radio-item">
-                <input type="radio" name="unit" value="3-bed"> 3 Bedroom
-              </label>
-              <label class="radio-item">
-                <input type="radio" name="unit" value="unsure"> Not Sure Yet
-              </label>
+              <label><input type="radio" name="unit_interest" value="2-bed" required> 2 Bedroom</label>
+              <label><input type="radio" name="unit_interest" value="3-bed"> 3 Bedroom</label>
+              <label><input type="radio" name="unit_interest" value="unsure"> Unsure</label>
             </div>
           </div>
 
           <button type="submit" class="reg-btn">Join the Insider List</button>
-
-          <p class="privacy-text">*We respect your privacy. Unsubscribe anytime.</p>
         </form>
+
       </div>
 
       <div class="reg-right">
@@ -486,6 +479,19 @@
       </div>
     </div>
   </section>
+
+  <!-- form -->
+  <div id="hubspotForm"></div>
+
+  <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+  <script>
+    hbspt.forms.create({
+      portalId: "39561244",
+      formId: "YOUR_FORM_ID",
+      target: "#hubspotForm"
+    });
+  </script>
+
 
   {{ standard_footer_includes }}
   <script src="{{ get_public_template_url('landing-pages/landing-page.js') }}"></script>

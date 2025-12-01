@@ -36,3 +36,25 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+
+
+const form = document.getElementById('leadForm');
+
+form.addEventListener('submit', async e => {
+  e.preventDefault();
+
+  const data = new URLSearchParams();
+  data.append('firstname', form.firstname.value);
+  data.append('lastname', form.lastname.value);
+  data.append('email', form.email.value);
+  data.append('phone', form.phone.value);
+  data.append('unit_interest', form.unit_interest.value);
+
+  const res = await fetch('https://forms.hubspot.com/uploads/form/v2/39561244/YOUR_FORM_ID', {
+    method: 'POST',
+    body: data
+  });
+
+  if (res.ok) alert('Lead submitted successfully!');
+  else alert('Submission failed!');
+});

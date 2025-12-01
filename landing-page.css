@@ -506,7 +506,7 @@ body {
 .center-feature-img {
   width: 100%;
   height: auto;
-  max-height: 70vh;
+  /* max-height: 70vh; */
   object-fit: cover;
   border-radius: 20px;
   margin-bottom: 2vh;
@@ -1866,6 +1866,14 @@ body {
   }
 }
 
+@media only screen and (min-width: 1600px) {
+
+  .hero-title {
+    font-size: 110px;
+    line-height: 110px;
+  }
+}
+
 
 
 /* --- Base Container --- */
@@ -2033,7 +2041,7 @@ body {
 .center-feature-img {
   width: 100%;
   height: auto;
-  max-height: 35vh;
+  /* max-height: 35vh; */
   /* Prevents image from taking too much vertical space */
   object-fit: cover;
   border-radius: 20px;
@@ -2160,7 +2168,7 @@ body {
 
   /* Adjust images inside mobile card */
   .center-feature-img {
-    max-height: 25vh;
+    /* max-height: 25vh; */
   }
 
   .col-right {
@@ -2336,7 +2344,7 @@ body {
 .center-feature-img {
   width: 100%;
   height: auto;
-  max-height: 35vh;
+  /* max-height: 35vh; */
   object-fit: cover;
   border-radius: 20px;
 }
@@ -2462,7 +2470,7 @@ body {
 
   /* Adjust images inside mobile card */
   .center-feature-img {
-    max-height: 25vh;
+    /* max-height: 25vh; */
   }
 
   .col-right {
@@ -2533,7 +2541,7 @@ body {
     border-radius: 20px;
     flex: 1 1 auto;
     min-height: 0;
-    max-height: 35vh;
+    /* max-height: 35vh; */
     width: 100%;
     object-fit: cover;
     margin-bottom: 15px;
