@@ -22,9 +22,16 @@
 
 
   <section class="hero-section" style="
-      background-image: 
-        url('{{ get_public_template_url('landing-pages/public/hero-img.png') }}');
+    background-image:
+      linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 0%,      /* Fully transparent at the top */
+        rgba(0, 0, 0, 0) 30%,    /* No shading for the first 30% */
+        rgba(6, 6, 6, 1) 100%    /* Starts fading to dark */
+      ),
+      url('{{ get_public_template_url('landing-pages/public/hero-img.png') }}');
   ">
+
     <div class="hero-overlay">
       <div class="container">
         <div class="hero-logo-container">
