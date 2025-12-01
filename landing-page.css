@@ -4,6 +4,7 @@ body {
   padding: 0;
   margin: 0;
   overflow-x: hidden;
+  color: #fefae0
 }
 
 .hero-section {
@@ -70,11 +71,12 @@ body {
   font-weight: 500;
   font-style: normal;
   font-size: 70px;
-  line-height: 60px;
+  line-height: 70px;
   letter-spacing: 0%;
   text-transform: capitalize;
   margin: 0;
   text-align: left;
+  color: #fefae0;
 }
 
 .hero-right {
@@ -157,7 +159,7 @@ body {
   }
 
   .hero-title {
-    font-size: 80px;
+    font-size: 70px;
     line-height: 1;
   }
 
@@ -343,6 +345,7 @@ body {
   opacity: 0;
   transform: scale(0.95);
   transition: all 0.8s ease-out 0.1s;
+  background-color: #fefae0;
 }
 
 .center-title {
@@ -501,7 +504,7 @@ body {
   height: auto;
   max-height: 70vh;
   object-fit: cover;
-  border-radius: 30px;
+  border-radius: 20px;
   margin-bottom: 2vh;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
@@ -1612,7 +1615,7 @@ body {
   }
 
   .hero-title {
-    font-size: 50px;
+    font-size: 60px;
     line-height: 55px;
   }
 
@@ -1726,7 +1729,7 @@ body {
   }
 
   .hero-title {
-    font-size: 60px;
+    font-size: 80px;
     line-height: 55px;
   }
 
@@ -1797,8 +1800,8 @@ body {
   }
 
   .hero-title {
-    font-size: 70px;
-    line-height: 60px;
+    font-size: 90px;
+    line-height: 90px;
   }
 
   .hero-right {
@@ -1979,6 +1982,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: #fefae0;
 
   /* Animation Prep */
   opacity: 0;
@@ -2028,7 +2032,7 @@ body {
   max-height: 35vh;
   /* Prevents image from taking too much vertical space */
   object-fit: cover;
-  border-radius: 4px;
+  border-radius: 20px;
 }
 
 /* --- Scroll Button --- */
@@ -2139,7 +2143,7 @@ body {
   /* 3. The "Card" Look */
   /* We style the inner content wrapper to look like a card on mobile */
   .center-content {
-    background-color: #fcf8e8;
+    background-color: #fefae0;
     padding: 25px;
     border-radius: 12px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
@@ -2275,6 +2279,7 @@ body {
 
 /* --- Center Card Content --- */
 .center-content {
+  background-color: #fefae0;
   width: 100%;
   max-width: 400px;
   display: flex;
@@ -2328,9 +2333,8 @@ body {
   width: 100%;
   height: auto;
   max-height: 35vh;
-  /* Prevents image from taking too much vertical space */
   object-fit: cover;
-  border-radius: 4px;
+  border-radius: 20px;
 }
 
 /* --- Scroll Button --- */
@@ -2441,7 +2445,7 @@ body {
   /* 3. The "Card" Look */
   /* We style the inner content wrapper to look like a card on mobile */
   .center-content {
-    background-color: #fcf8e8;
+    background-color: #fefae0;
     padding: 25px;
     border-radius: 12px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
@@ -2522,12 +2526,12 @@ body {
   }
 
   .center-feature-img {
+    border-radius: 20px;
     flex: 1 1 auto;
     min-height: 0;
     max-height: 35vh;
     width: 100%;
     object-fit: cover;
-    border-radius: 4px;
     margin-bottom: 15px;
   }
 
