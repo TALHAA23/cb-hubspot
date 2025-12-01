@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: sans-serif;
   background: #f6f7fb;
@@ -95,7 +99,7 @@ body {
   line-height: 16px;
   letter-spacing: 1%;
   margin-bottom: 30px;
-  color: #e0e0e0;
+  color: #FEFAE0;
 }
 
 .hero-buttons {
