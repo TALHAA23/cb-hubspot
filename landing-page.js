@@ -50,10 +50,13 @@ form.addEventListener('submit', async e => {
   data.append('phone', form.phone.value);
   data.append('unit_interest', form.unit_interest.value);
 
-  const res = await fetch('https://forms.hubspot.com/uploads/form/v2/39561244/YOUR_FORM_ID', {
-    method: 'POST',
-    body: data
-  });
+  // data.append("hs_lead_status", form.querySelector('[name="unit_interest"]:checked').value);
+  // data.append("hs_lead_status", "open");
+
+  const res = await fetch(
+    "https://forms.hubspot.com/uploads/form/v2/39561244/fde1efd1-85eb-4fea-a65b-b0eb9f0b7b2c",
+    { method: "POST", body: data }
+  );
 
   if (res.ok) alert('Lead submitted successfully!');
   else alert('Submission failed!');
