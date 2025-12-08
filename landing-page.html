@@ -29,7 +29,7 @@
         rgba(0, 0, 0, 0) 30%,    /* No shading for the first 30% */
         rgba(6, 6, 6, 1) 100%    /* Starts fading to dark */
       ),
-      url('{{ get_public_template_url('landing-pages/public/hero-img.png') }}');
+      url('{{ get_public_template_url('landing-pages/public/hero-img.jpg') }}');
   ">
 
     <div class="hero-overlay">
@@ -76,10 +76,10 @@
 
         <div class="feature-section--feature">
           <img src="{{ get_public_template_url('landing-pages/public/cart-icon.svg') }}" alt="Cart Icon">
-          <h1>Walk to 70+ Local Shops</h1>
+          <h1>Walk to Local Shops</h1>
           <p>
-            Walk to 70+ Local Shops Step outside your door to experience Currie's vibrant retail district. From coffee
-            shops and restaurants to boutiques and services, everything you need is just a short stroll away.
+            Step outside your door to experience Currie's vibrant retail district. From coffee shops and restaurants to
+            boutiques and services, everything you need is just a short stroll away.
           </p>
         </div>
 
@@ -94,7 +94,7 @@
 
         <div class="feature-section--feature">
           <img src="{{ get_public_template_url('landing-pages/public/key-icon.svg') }}" alt="Key Icon">
-          <h1>Move-In Ready Winter 2026</h1>
+          <h1>Move-In Ready winter 2026 - spring 2027</h1>
           <p>
             Start planning your future now. With construction timelines already established, you can confidently prepare
             for your move to Nichola Townhomes and begin your new chapter in Currie.
@@ -117,7 +117,8 @@
 
         <div class="sticky-col col-center">
           <div class="center-content">
-            <h3 class="center-title">Preview Center Opening<br>Early Fall 2025</h3>
+            <!-- <h3 class="center-title">Preview Center Opening<br>Early Fall 2025</h3> -->
+            <h3 class="center-title">Early 2026</h3>
             <p class="center-desc">
               Be among the first to walk through our center to learn about the Nichola difference. Register now for
               priority access to preview appointments and secure your spot before public sales begin.
@@ -138,7 +139,7 @@
       </div>
     </section>
 
-    <section class="sticky-card"
+    <!-- <section class="sticky-card"
       style="background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('{{ get_public_template_url('landing-pages/public/feature-img.jpg') }}'); background-size: cover; background-position: center;">
       <div class="sticky-overlay">
 
@@ -226,7 +227,7 @@
           </button>
         </div>
       </div>
-    </section>
+    </section> -->
 
   </div>
 
@@ -266,7 +267,7 @@
 
           <div class="location-item">
             <span class="loc-num">03</span>
-            <span class="loc-text">Walking distance to over 70 local businesses</span>
+            <span class="loc-text">Walking distance to multiple businesses</span>
           </div>
 
           <div class="location-item">
@@ -363,11 +364,13 @@
           <div class="form-input radio-row">
             <span class="radio-label">Unit Interest*</span>
             <div class="radio-options">
-              <label><input type="radio" name="unit_interest" value="2-bed"> 2 Bedroom</label>
-              <label><input type="radio" name="unit_interest" value="3-bed"> 3 Bedroom</label>
-              <label><input type="radio" name="unit_interest" value="unsure"> Unsure</label>
+              <label><input type="radio" name="unit_interest" value="2-bedroom">2 Bedroom</label>
+              <label><input type="radio" name="unit_interest" value="3-bedroom">3 Bedroom</label>
+              <label><input type="radio" name="unit_interest" value="unsure">Not Sure Yet</label>
             </div>
           </div>
+
+
 
           <button type="submit" class="reg-btn">Join the Insider List</button>
         </form>
