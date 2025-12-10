@@ -1,60 +1,57 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
+  const scrollButtons = document.querySelectorAll(".scroll-down-btn");
 
-  const scrollButtons = document.querySelectorAll('.scroll-down-btn');
-
-  scrollButtons.forEach(btn => {
-    btn.addEventListener('click', function() {
-      const currentSection = this.closest('.sticky-card');
+  scrollButtons.forEach((btn) => {
+    btn.addEventListener("click", function () {
+      const currentSection = this.closest(".sticky-card");
       const nextSection = currentSection.nextElementSibling;
       if (nextSection) {
-        nextSection.scrollIntoView({ 
-          behavior: 'smooth',
-          block: 'start'
+        nextSection.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
         });
       }
     });
   });
-  const cards = document.querySelectorAll('.sticky-card');
+  const cards = document.querySelectorAll(".sticky-card");
 
   const observerOptions = {
     root: null,
-    rootMargin: '0px',
-    threshold: 0.2
+    rootMargin: "0px",
+    threshold: 0.2,
   };
 
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
+        entry.target.classList.add("is-visible");
       } else {
       }
     });
   }, observerOptions);
 
-  cards.forEach(card => {
+  cards.forEach((card) => {
     observer.observe(card);
   });
-
 });
 
+const form = document.getElementById("leadForm");
 
-const form = document.getElementById('leadForm');
-
-form.addEventListener('submit', async e => {
+form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
   const data = new URLSearchParams();
-  data.append('firstname', form.firstname.value);
-  data.append('lastname', form.lastname.value);
-  data.append('email', form.email.value);
-  data.append('phone', form.phone.value);
-  data.append('unit_interest', form.unit_interest.value);
+  data.append("firstname", form.firstname.value);
+  data.append("lastname", form.lastname.value);
+  data.append("email", form.email.value);
+  data.append("phone", form.phone.value);
+  data.append("unit_interest", form.unit_interest.value);
 
   const res = await fetch(
     "https://forms.hubspot.com/uploads/form/v2/39561244/fde1efd1-85eb-4fea-a65b-b0eb9f0b7b2c",
     { method: "POST", body: data }
   );
 
-  if (res.ok) alert('Lead submitted successfully!');
-  else alert('Submission failed!');
+  if (res.ok) alert("Lead submitted successfully!");
+  else alert("Submission failed!");
 });

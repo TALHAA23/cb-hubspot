@@ -34,9 +34,9 @@ body {
 }
 
 .container {
-  max-width: 2000px;
+  /* max-width: 2000px; */
   margin: 0 auto;
-  padding: 20px;
+  padding: 20px 40px;
   width: 100%;
   box-sizing: border-box;
   flex-grow: 1;
@@ -47,26 +47,26 @@ body {
 
 .hero-logo-container {
   text-align: center;
-  padding-top: 10px;
+  padding-top: 34px;
 }
 
 .hero-logo {
-  width: 179px;
-  height: 52px;
+  /* width: 179px;
+  height: 52px; */
   object-fit: contain;
+  filter: invert(1);
 }
 
 .hero-content {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   padding-bottom: 90px;
   flex-wrap: wrap;
   transform: translateY(20px);
 }
 
 .hero-left {
-  flex: 1;
   min-width: 300px;
 }
 
@@ -86,7 +86,7 @@ body {
 .hero-right {
   flex: 1;
   min-width: 300px;
-  max-width: 500px;
+  /* max-width: 500px; */
   text-align: left;
   padding-left: 40px;
 }
@@ -98,7 +98,7 @@ body {
   font-size: 16px;
   line-height: 16px;
   letter-spacing: 1%;
-  margin-bottom: 30px;
+  margin-bottom: 17px;
   color: #FEFAE0;
 }
 
@@ -121,9 +121,9 @@ body {
 }
 
 .btn-primary {
-  background-color: #fcf8e8;
-  color: #333;
-  border: 1px solid #fcf8e8;
+  background-color: #FEFAE0;
+  color: #111111;
+  /* border: 1px solid #fcf8e8; */
   padding: 10px 25px;
 }
 
@@ -146,6 +146,7 @@ body {
 }
 
 @media (max-width: 768px) {
+
   .hero-section {
     height: auto;
     min-height: 100vh;
@@ -164,7 +165,7 @@ body {
 
   .hero-title {
     font-size: 70px;
-    line-height: 1;
+    line-height: 70px;
   }
 
   .hero-buttons {
@@ -181,7 +182,7 @@ body {
   background: #606C38;
   padding: 80px 0;
   color: #fff;
-  margin-top: -80px;
+  margin-top: -40px;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
   position: relative;
@@ -257,6 +258,7 @@ body {
 }
 
 @media (max-width: 1200px) {
+
   .feature-section--feature-wrapper {
     flex-direction: column;
     gap: 50px;
@@ -747,6 +749,8 @@ body {
 }
 
 @media (max-width: 768px) {
+
+
   .statement-section {
     padding: 100px 20px;
   }
@@ -864,6 +868,7 @@ body {
   color: #333;
   margin: 0;
   max-width: 200px;
+  text-align: left;
 }
 
 
@@ -909,6 +914,7 @@ body {
 
   .priority-feature-item p {
     max-width: 100%;
+    text-align: left;
   }
 }
 
@@ -1424,6 +1430,12 @@ body {
 
 /* Mobile/Tablet Only (Below 768px) */
 @media (max-width: 768px) {
+
+  .hero-logo {
+    max-width: 140px;
+    /* slightly larger than phones */
+  }
+
   .footer-row {
     flex-direction: column;
     gap: 15px;
@@ -1446,6 +1458,11 @@ body {
 
 /* Small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+
+  .hero-logo {
+    max-width: 120px;
+  }
+
   .hero-section {
     height: auto;
     min-height: 400px;
@@ -1469,7 +1486,7 @@ body {
 
   .hero-title {
     font-size: 36px;
-    line-height: 40px;
+    line-height: 36px;
     text-align: center;
   }
 
@@ -1539,6 +1556,7 @@ body {
 
   .priority-feature-item p {
     max-width: 100%;
+    text-align: left;
   }
 
   .registration-section {
@@ -1615,6 +1633,11 @@ body {
 
 /* Medium devices (tablets, 601px to 992px) */
 @media only screen and (min-width: 601px) and (max-width: 992px) {
+
+  .hero-logo {
+    max-width: 150px;
+  }
+
   .hero-section {
     min-height: 500px;
   }
@@ -1637,7 +1660,7 @@ body {
 
   .hero-title {
     font-size: 60px;
-    line-height: 55px;
+    line-height: 60px;
   }
 
   .hero-description {
@@ -1741,17 +1764,31 @@ body {
   .builder-title {
     font-size: 55px;
   }
+
+  .footer-row {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    /* Increase padding for touch targets on mobile */
+    white-space: normal;
+    /* Allow wrapping on mobile */
+  }
 }
 
 /* Large devices (desktops, 993px to 1200px) */
 @media only screen and (min-width: 993px) and (max-width: 1200px) {
+
+  .hero-logo {
+    max-width: 165px;
+  }
+
   .hero-section {
     min-height: 650px;
   }
 
   .hero-title {
-    font-size: 80px;
-    line-height: 55px;
+    font-size: 70px;
+    line-height: 70px;
   }
 
   .hero-description {
@@ -1761,6 +1798,10 @@ body {
 
   .hero-right {
     padding-left: 30px;
+  }
+
+  .hero-content {
+    gap: 80px;
   }
 
   .priority-section {
@@ -1820,9 +1861,13 @@ body {
     min-height: 100vh;
   }
 
+  .hero-content {
+    gap: 350px;
+  }
+
   .hero-title {
-    font-size: 90px;
-    line-height: 90px;
+    font-size: 70px;
+    line-height: 70px;
   }
 
   .hero-right {
@@ -2123,15 +2168,10 @@ body {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     max-width: 100%;
     max-height: 60vh;
-    /* Ensure it doesn't overflow screen */
     overflow-y: auto;
-    /* Scroll inside card if text is huge */
   }
 
-  /* Adjust images inside mobile card */
-  .center-feature-img {
-    /* max-height: 25vh; */
-  }
+
 
   .col-right {
     display: none;
@@ -2290,6 +2330,8 @@ body {
   transform: translateY(0) scale(1);
 }
 
+
+
 /* =========================================
    RESPONSIVE REWRITE (Tablet & Mobile)
    ========================================= */
@@ -2322,18 +2364,14 @@ body {
     box-sizing: border-box;
   }
 
-  /* 1. Header Area (Top) */
   .col-left {
     height: auto;
-    /* Don't take full height */
     flex: 0 0 auto;
     padding: 20px 0;
     align-items: center;
     text-align: center;
     background: transparent;
-    /* Remove background dimming specific to column */
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-    /* Make text pop over image */
   }
 
   .sticky-title {
@@ -2346,23 +2384,16 @@ body {
     font-size: 0.9rem;
   }
 
-  /* 2. Content Area (Bottom/Middle) */
   .col-center {
     height: auto;
-    /* Let content dictate height */
     flex: 1;
-    /* Take remaining space */
     background-color: transparent;
-    /* Remove full column background */
     padding: 0;
     display: flex;
     align-items: flex-end;
-    /* Push card to bottom or center */
     padding-bottom: 40px;
   }
 
-  /* 3. The "Card" Look */
-  /* We style the inner content wrapper to look like a card on mobile */
   .center-content {
     background-color: #FEFAE0;
     padding: 25px;
@@ -2370,12 +2401,9 @@ body {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     max-width: 100%;
     max-height: 60vh;
-    /* Ensure it doesn't overflow screen */
     overflow-y: auto;
-    /* Scroll inside card if text is huge */
   }
 
-  /* Adjust images inside mobile card */
   .center-feature-img {
     /* max-height: 25vh; */
   }
@@ -2417,12 +2445,16 @@ body {
   }
 
   .sticky-btn {
-    display: none;
+    /* display: none; */
+    font-size: 0.7rem;
+    margin: 10px 0;
+    padding: 8px 10px;
   }
 
   .col-center {
     width: 100%;
     height: 100%;
+    max-height: 400px;
     padding: 60px 20px 20px 20px;
     box-sizing: border-box;
     display: flex;
@@ -2431,10 +2463,15 @@ body {
     background: transparent;
   }
 
+  .sticky-overlay {
+    display: flex;
+    justify-content: center;
+  }
+
   .center-content {
     background-color: #FEFAE0;
     width: 100%;
-    max-height: 100%;
+    /* max-height: 100%; */
     border-radius: 12px;
     padding: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
@@ -2496,13 +2533,13 @@ body {
 
   /* HERO */
   .hero-title {
-    font-size: 180px;
-    line-height: 180px;
+    font-size: 130px;
+    line-height: 130px;
   }
 
   .hero-description {
-    font-size: 42px;
-    line-height: 44px;
+    font-size: 22px;
+    line-height: 28px;
   }
 
 
@@ -2611,6 +2648,7 @@ body {
   .priority-feature-item p {
     font-size: 20px;
     max-width: 310px;
+    text-align: left;
   }
 
 
@@ -2664,10 +2702,10 @@ body {
     bottom: 7vh;
   }
 
-  .hero-logo {
+  /* .hero-logo {
     width: 260px;
     height: 64px;
-  }
+  } */
 
   .btn {
     font-size: 1.65rem;
@@ -2676,9 +2714,16 @@ body {
   }
 
   .btn-primary {
-    padding: 24px 60px;
+    /* padding: 24px 60px; */
+    width: 238px;
+    height: 62px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
     border-width: 2px;
+    font-size: 18px;
   }
+
 
   .feature-section--feature>img {
     width: 40px;
@@ -2719,5 +2764,9 @@ body {
   .footer-copyright {
     font-size: 16px;
     text-align: right;
+  }
+
+  .container {
+    padding: 20px 120px;
   }
 }
